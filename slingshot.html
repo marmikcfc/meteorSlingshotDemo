@@ -1,0 +1,72 @@
+<head>
+  <title>slingshot</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  {{> loginButtons}}
+  {{#if currentUser}}
+
+    {{> progressBar}} 
+    {{> slingshotForm}}
+  {{else}}
+    <p> Please login to upload Videos to AWS</p>
+  {{/if}}
+  <h1>Users Videos</h1>
+  <ul>
+    {{> uploadedPictures}}
+   </ul>
+</body>
+
+<template name="myPicture">
+  <img src={{url}}/>
+</template>
+
+<template name="uploadedPictures">
+  <!-- {{#each pictures}}
+    <li>{{this.name}}: <img src="{{this.url}}" height=75 width=75></li>
+  {{/each}}
+ -->
+
+<ul>
+
+ {{#each pictures}}
+    
+<li>
+<br />
+<br />
+
+    <video id="example_video_1" class="video-js vjs-default-skin"
+      controls preload="auto"
+      data-setup='{"example_option":true}'>
+      <source src="{{this.url}}" type='video/mp4' />
+
+      <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p>
+    </video>  
+  
+
+</li>
+
+  {{/each}}
+
+
+</ul>
+
+</template>
+
+<template name="slingshotForm">
+  <form>
+    <input type="file" id="fileToUpload" accept="video/*">
+    <input type="submit">
+  </form>
+</template>
+
+<template name="progressBar">
+
+  <div class="progress overallProgress" >
+    <div class="progress-bar" role="progressbar" aria-valuenow="{{progress}}" aria-valuemin="0" aria-valuemax="100" style="width: {{progress}}%;">
+      <span>{{progress}}% Total Complete</span>
+    </div>
+  </div>
+</template>
+

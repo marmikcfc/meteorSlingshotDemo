@@ -7,3 +7,10 @@
 meteor-platform
 autopublish
 insecure
+edgee:slingshot
+accounts-password
+accounts-ui
+ccorcos:clientside-image-manipulation
+yong:meteor-videojs
+bootstrap
+mizzao:bootstrap-3

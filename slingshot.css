@@ -1,0 +1,9 @@
+/* CSS declarations go here */
+
+.overallProgress{
+    clear:both;
+    width:200px;
+    margin:20px;
+    text-align:center;
+    margin-bottom:0px;
+}
