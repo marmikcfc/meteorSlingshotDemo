@@ -11,8 +11,8 @@ function generateUUID() {
 Slingshot.createDirective("myFileUploads", Slingshot.S3Storage, {
   bucket: "marmik",
  acl: "public-read",
-      AWSAccessKeyId: "AKIAJFTHRKBYIUAQUUVA",
-      AWSSecretAccessKey: "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",
+      AWSAccessKeyId: "AWSAccessKeyId",
+      AWSSecretAccessKey: "AWSSecretAccessKey",
       region: "us-east-1",
   authorize: function () {
     //Deny uploads if user is not logged in.
